@@ -14,14 +14,16 @@
  '(org-startup-indented t)
  '(package-selected-packages
    (quote
-    (markdown-preview-mode markdown-mode org-pdfview atomic-chrome wgrep-ag wgrep treemacs-projectile treemacs origami dumb-jump ace-window org-bullets which-key use-package try)))
+    (google-c-style haskell-mode column-enforce-mode markdown-preview-mode markdown-mode org-pdfview atomic-chrome wgrep-ag wgrep treemacs-projectile treemacs origami dumb-jump ace-window org-bullets which-key use-package try)))
  '(scroll-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(my-long-line-face ((((class color)) (:background "gray10"))) t)
+ '(my-tab-face ((((class color)) (:background "grey10"))) t)
+ '(my-trailing-space-face ((((class color)) (:background "gray10"))) t))
 
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
@@ -42,37 +44,49 @@ There are two things you can do about this warning:
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
+;;; load scripts from others
+(add-to-list 'load-path "~/.emacs.others/")
+
+;; this higlights the column of the cursor is
+(load "~/.emacs.others/column-marker.el")
+(load "~/.emacs.others/highlight-beyond-fill-column.el")
+(load "~/.emacs.others/multiple-cursors-rc.el")
+;(load "~/.emacs.others/google-c-style.el")
+
+
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 
+(load "~/.emacs.me/atomic-chrom.el")
+(load "~/.emacs.me/autocomplete.el")
+(load "~/.emacs.me/avy.el")
+(load "~/.emacs.me/better-shell.el")
+(load "~/.emacs.me/code.el")
+(load "~/.emacs.me/cpp.el")
+(load "~/.emacs.me/company.el")
+(load "~/.emacs.me/dired.el")
+(load "~/.emacs.me/dump-jump.el")
+(load "~/.emacs.me/flycheck.el")
+(load "~/.emacs.me/git.el")
+(load "~/.emacs.me/haskell.el")
+(load "~/.emacs.me/hydra.el")
+(load "~/.emacs.me/ibuffer.el")
+(load "~/.emacs.me/iedit.el")
+(load "~/.emacs.me/javascript.el")
+(load "~/.emacs.me/markdown.el")
 (load "~/.emacs.me/misc-rc.el")
+(load "~/.emacs.me/origami.el")
 (load "~/.emacs.me/org-mode.el")
+(load "~/.emacs.me/pdf-tools.el")
+(load "~/.emacs.me/reveal-js.el")
 (load "~/.emacs.me/switch-windows.el")
 (load "~/.emacs.me/swiper-ivy-counsel.el")
-(load "~/.emacs.me/avy.el")
-(load "~/.emacs.me/autocomplete.el")
-(load "~/.emacs.me/company.el")
-(load "~/.emacs.me/flycheck.el")
 (load "~/.emacs.me/themes.el")
-(load "~/.emacs.me/reveal-js.el")
-(load "~/.emacs.me/yasnippets.el")
-(load "~/.emacs.me/undo.el")
-(load "~/.emacs.me/which.el")
-(load "~/.emacs.me/iedit.el")
-(load "~/.emacs.me/web-mode.el")
-(load "~/.emacs.me/javascript.el")
-(load "~/.emacs.me/dired.el")
-(load "~/.emacs.me/hydra.el")
-(load "~/.emacs.me/git.el")
-(load "~/.emacs.me/better-shell.el")
-(load "~/.emacs.me/cpp.el")
-(load "~/.emacs.me/dump-jump.el")
-(load "~/.emacs.me/origami.el")
-(load "~/.emacs.me/ibuffer.el")
 (load "~/.emacs.me/treemacs.el")
+(load "~/.emacs.me/undo.el")
+(load "~/.emacs.me/web-mode.el")
 (load "~/.emacs.me/wgrep.el")
-(load "~/.emacs.me/atomic-chrom.el")
-(load "~/.emacs.me/pdf-tools.el")
-(load "~/.emacs.me/markdown.el")
+(load "~/.emacs.me/which.el")
+(load "~/.emacs.me/yasnippets.el")
