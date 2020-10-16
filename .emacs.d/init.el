@@ -14,7 +14,7 @@
  '(org-startup-indented t)
  '(package-selected-packages
    (quote
-    (google-c-style haskell-mode column-enforce-mode markdown-preview-mode markdown-mode org-pdfview atomic-chrome wgrep-ag wgrep treemacs-projectile treemacs origami dumb-jump ace-window org-bullets which-key use-package try)))
+    (flutter-l10n-flycheck flutter flymake-google-cpplint rtags auto-yasnippet yasnippet-snippets web-mode undo-tree doom-modeline all-the-icons-dired all-the-icons-ivy all-the-icons zenburn-theme counsel htmlize ox-reveal pdf-tools expand-region hungry-delete beacon posframe tern-auto-complete tern js2-refactor ac-js2 js2-mode iedit google-c-style haskell-mode column-enforce-mode markdown-preview-mode markdown-mode org-pdfview atomic-chrome wgrep-ag wgrep treemacs-projectile treemacs origami dumb-jump ace-window org-bullets which-key use-package try)))
  '(scroll-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -51,7 +51,7 @@ There are two things you can do about this warning:
 (load "~/.emacs.others/column-marker.el")
 (load "~/.emacs.others/highlight-beyond-fill-column.el")
 (load "~/.emacs.others/multiple-cursors-rc.el")
-;(load "~/.emacs.others/google-c-style.el")
+(load "~/.emacs.others/google-c-style.el")
 
 
 ;; Bootstrap `use-package'
@@ -90,3 +90,4 @@ There are two things you can do about this warning:
 (load "~/.emacs.me/wgrep.el")
 (load "~/.emacs.me/which.el")
 (load "~/.emacs.me/yasnippets.el")
+(load "~/.emacs.me/flutter.el")

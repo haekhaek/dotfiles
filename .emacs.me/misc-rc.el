@@ -19,8 +19,8 @@
   (display-battery-mode 1))
 
 ;;; set font
-(add-to-list 'default-frame-alist '(font . "Iosevka-21" ))
-(set-face-attribute 'default t :font "Iosevka-21" )
+(add-to-list 'default-frame-alist '(font . "Iosevka-23" ))
+(set-face-attribute 'default t :font "Iosevka-23" )
 
 ;(require 'column-marker)
 ;(add-hook 'foo-mode-hook (lambda () (interactive) (column-marker-1 80)))

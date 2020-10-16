@@ -3,7 +3,6 @@
 (setq whitespace-style '(face lines-tail))
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
-
 (use-package google-c-style
   :ensure t)
 (add-hook 'c-mode-common-hook 'google-set-c-style)

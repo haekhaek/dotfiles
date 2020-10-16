@@ -7,5 +7,5 @@
               (ggtags-mode 1))))
 )
 
-;(require 'rtags) ;; optional, must have rtags installed
+(require 'rtags) ;; optional, must have rtags installed
 (cmake-ide-setup)

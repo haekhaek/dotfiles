@@ -1,7 +1,7 @@
 (use-package zenburn-theme
   :ensure t
-  )
-					;https://github.com/domtronn/all-the-icons.el
+  );https://github.com/domtronn/all-the-icons.el
+
 (use-package all-the-icons 
   :ensure t
   :defer 0.5)
